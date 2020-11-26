@@ -6,20 +6,23 @@ module.exports = {
         app: path.join(__dirname, "src/index.ts")
     },
     resolve: {
-        extensions: [".ts", ".js", ".scss"]
+        extensions: [".tsx", ".ts", ".js", ".scss"]
     },
     module: {
         rules: [
             {
-                test: /\.ts$/,
+                test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
-              },
+            }, {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template:  path.join(__dirname, "src/index.html"),
+            template: path.join(__dirname, "src/index.html"),
             minify: false
         })
     ]

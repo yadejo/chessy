@@ -1,9 +1,10 @@
-import { ChessBoard } from "./domain/chess-game";
-import { renderChessBoard } from "./ui/chess-board.component";
+import { bootstrapUI } from "./ui";
+import { ChessBoard } from "./domain/chess-board";
+// import { renderChessBoard } from "./ui/chess-board.component";
 
 const board = new ChessBoard();
 
 const renderContainer = document.getElementById("app-container");
 
-if(renderContainer){
-    renderContainer.innerHTML = renderChessBoard(board);}
+if (renderContainer)
+    bootstrapUI(board, renderContainer);

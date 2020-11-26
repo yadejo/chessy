@@ -1,0 +1,17 @@
+.ChessBoardSquare {
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+}
+
+.ChessBoardSquare__light {
+    background-color: #ECDBC4;
+}
+
+.ChessBoardSquare__dark {
+    background-color: #592929;
+}
+
+.ChessBoardSquare__highlighted {
+    background-color: #7c97cf;
+}
